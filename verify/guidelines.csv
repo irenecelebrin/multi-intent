@@ -1,0 +1,92 @@
+Categories,Explanations,Additional Guidance/Examples
+Adult,"The search query has implicit or explicit adult or illegal intent, for example porn, alcohol, drugs, cannabis, cigarettes, guns. ","Most adult queries are clear. However there are some subtle cases that may not seem adult at first but when you research the query, you'll see that they are (amateur videos, daddy movies).
+"
+Automotive,"This is for search queries about cars, motorcycles, trucks, parts and products, looking to research, buy, or sell any of them. Local automotive organizations and businesses such as autmotive dealers and mechanics go here too.
+","Does NOT include boats and RVs, does NOT include rental cars.
+
+- car brands are nav + local (+locsens)
+- car brand + model are only locsens 
+- boats: other"
+Company,"search queries looking for generic company information (i.e., link to the company's Wikipedia, company's Twitter account)
+",
+Dictionary,"The search query is expected to trigger the dictionary-related modules or content
+",
+Education,"Search queries about any kind of school (kindergarten, primary school, secondary school, college and university, continuing education, vocational etc.), educational & classroom supplies, tutors, local educational organizations and services, lesson planning, education policy and issues, and other formal education related concepts.
+","Homework-related queries, or queries that are related to subjects learned in school (math, science, history, grammar, etc.) do NOT go here."
+Entertainment,"Search queries about anything involving books, movies, music, games, TV, and other entertainment such as comedy, magazines, newspapers, comics, radio, live theatre, nightclubs, and performance and visual arts.
+",Generic queries for YouTube as well as queries for news stations go here.
+Finance,"Includes search queries about personal finance, public or private company names, stock tickers, financial services, financial businesses and organizations, stock market related concepts, and finance news.","This category also covers local financial entities such as banks, mortgage lenders, financial advisors, insurance, etc.
+
+- general insurance (State Farm): only finance; no need to mention every type of insurance offered by the company.
+- specific type of insurance (Geico car insurance): mark both ""auto"" and ""finance"" and choose the insurance type as the primary categories, i.e. ""auto."""
+Health,"Search queries about diseases and conditions, therapies/treatments, providers, and facilities (hospitals, clinics, private practitioner offices, etc.), as well as medical and health supplies, products, and retailers. Also includes health related persons, health policy, and health care related issues/news (obamacare, symptoms of depression).
+","""Alternative medicine"" such as aromatherapy, massage, Santeria, and Ayurveda do NOT go here."
+Local,"A search query expected to show a local module/map with locations. The map can include one individual business or a list of businesses. The user would be interested in seeing the address, phone number, operating hours, etc. of either a single business or serveral businesses.","Map queries, home addresses, and regional radio stations are NOT local!
+ALL Local judgments are ALWAYS also Location Sensitive.
+
+- Real estate is not local
+- Rental places/complexes like “Santana Row Apartments” are local since they are businesses
+- POI can be local
+- Product queries are a case by case scenario
+- Radio stations are not local
+- Menu items/cuisine types can be local (i.e: Sushi), but it's also case by case
+- Local entity + attribute (review, address, phone, menu) can be local but not always
+- International local is also local
+"
+Location Sensitivity,"These search queries will show different information on the search results page based on where the user is searching from. This is relevant for things like web results & quicklinks specific to a particular region (like on Craigslist, Redfin, etc.), local weather forecasts, ads for tax filing services that serve the correct state/country, etc. If something on the SRP (DDs, algo, ads, etc.) would look different according to where the user is, then it is Location Sensitive.
+","NOT all Location Sensitive judgments are also Local
+
+Queries with an explicit location are now Location Sensitive
+
+""- maps and directions are loc sens—EXCEPT for printables (blank map of texas)
+- TV guide/tv listings are loc sens—there could be ads for tv listings/ local cable companies
+
+These are NOT location sensitive
+- image and video intents (san francisco ca photos, new york travel vlog)
+- history and culture intents (war of 1812 ohio, traditional clothing china)
+- place names that refer to teams or colleges (golden state vs cleveland, oregon vs washington football)
+- currency queries (canadian dollar)
+- symbols & native wildlife (california state flower, vermont motto, michigan bird, rattlesnakes in phoenix)"""
+Movie,"The search query is expected to trigger a movie-related module/content on the search results page 
+",
+Navigational,"Intent of the query is to navigate to a specific website. This intent can be implicit (facebook, yahoo homepage) or explicit (facebook.com, yahoo.com).","Search queries with an intent that can be satisfied by a type of website (timezone calculator, 10 day weather forecast) are NOT navigational unless they specify a single, specific website they want to satisfy that intent. 
+"
+People,"Search query searching for both notable AND non-notable people.
+
+Notable people includes current-day, historical, and fictional famous or notable people.
+Notable people should belong to ""people"" here, but the primary category is the domain in which they are most notable (athletes → sports, actors → entertainment, professors → education, etc.)
+
+Searches for a non-famous person include non-notable names, user IDs/social media handles, personal email addresses and phone numbers that look like reverse-look ups.
+",
+Place,"Search query about a geographic location (i.e., city, countries, states), schools/colleges, school districts, Point Of interests (i.e., touristy attractions, like the Eiffel Tower), parks, etc.
+","Local businesses (stores, restaurants, banks, dry cleaners etc.) should NOT get a 'Place' label"
+Shopping,Shopping search queries are product and shopping queries seeking to purchase a tangible good. Pre-purchase research queries are considered Shopping. This also includes coupons for products and B2B product search. Also includes big box Retailers that don't specialize in a genre of product like Amazon or Walmart.,"Post-purchase research (manuals, how-to-use, etc.) are NOT Shopping.
+
+Search queries for cars and travel (plane tickets, hotel reservations, etc.) are NOT shopping. Shopping ≠ everything people pay money for.
+
+- Firearms and firearms retailers are shopping queries. You can also classify them under sports recreation.
+- Prescription meds are shopping queries
+- Popular flowers like """"roses"""" can be shopping queries
+- Adult queries can be shopping if the query is about an adult product (sex swing)
+- eBay and similar shopping platforms are shopping queries
+- Generic classifieds sites like Craigslist are not shopping unless there is an explicit intent for product shopping on Craigslist
+- Local queries can also be shopping. Examples: Target and Target SF
+- Navigational queries can also be shopping. Examples: target.com
+- Auto queries: ONLY auto parts are shopping queries
+"
+Sports,"Sports queries include professional, college and amateur organized sports as well as active indoor or outdoor activities. All kinds of sports organizations, leagues, conferences, teams, athletes and coaches, announcers, products, retailers, venues (arenas, fields, stadiums) and events are included here, as well as informational queries about sports (how many innings in baseball, what is a triple double)
+",
+Technology,"Search queries about computers, software and hardware, electronic devices like cell phones, digital cameras, and consoles as well as tech organizations, businesses, and people (CEOs, developers, etc.). Tech also is for how-to and product support or help queries related to technology, electronics, programming, and software.
+","Tech is NOT for ""tech companies"" the way we use the term in Silicon Valley. Queries for companies like Google, Facebook, and Yahoo are NOT tech! Companies who provide tech related services and products, however, are good (Apple, Dell, IBM, etc.)"
+Travel,"Search queries about leisure, business, and short- or long-distance travel and tourism related services, lodging (campgrounds included), retailers, organizations, businesses, destinations, services, products, events, etc. ","Examples are airline fares, plane tickets, american airlines, sleep sack, money belts, paris, eiffel tower, paris sights, hilton hotel seattle, marriott.com, youth hostel association, how to not get seasick (logically is travel or leisure oriented; if you're a professional fisherman you're unlikely to run this query).
+
+Includes:
+- Lodgings (hotels, resorts, airbnb, camping etc.)
+- Transportation related to travel (airlines, long distance train/bug, cruise, road trip etc.) but NOT commuter trasportation (bus/commuter rail etc.)
+- Travel products (luggage, packing gadgets etc.)
+- Casinos
+- Points of Interest & Travel destinations (disneyland, eiffel tower, brooklyn bridge, maldives, tahoe etc.)
+ "
+TV,"A  search query expected to trigger TV-related content/modules.
+",
+Others,"Any other category not included in those above, such as news, real estate, home improvement services, recipes.  ",

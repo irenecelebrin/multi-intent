@@ -1,0 +1,80 @@
+# About verify.py
+
+## What does the script do? 
+
+It reads the input file (batch.csv) (with Query, Titles, all categories applied). Based on guidelines (categories set and explaination) and golden set (batch 1), the script call chatGPT and asks to review the categories. The api provides as output 2 judgements: WRONG (for wrong categories) and MISSING (for missing categories). 
+The script then creates a output file including query, titles, all categories applied, and API judgement (WRONG:category|FALSE:category). 
+
+***Input data***
+
+what is roblox,Roblox - Wikipedia;What is Roblox? Here’s everything you need to know | CNN ...;Roblox,navigational; entertainment 
+
+***Output data*** 
+what is roblox,"['Roblox - Wikipedia', 'What is Roblox? Here’s everything you need to know | CNN ...', 'Roblox']","['navigational', ' entertainment']","WRONG:,MISSING:education|entertainment|company"
+
+
+***Required files*** input file with data to verify, golden set, guidelines 
+//TODO: add guidelines inside the prompt instead of importing file in the prompt.
+
+## Prompt
+
+I need to assign categories to identify user intents when inputting search queries on the web. 
+
+       Read carefully the set of categories in {guidelines_file} to familiarize with the categories, and review the golden set in {golden_set} to see how categories are assigned. 
+       
+       After that, help me review the following data to check if any categories are missing, or are wrong. 
+       Read the row in {batch_row}. It includes the following information: 
+       - Query: a search query 
+       - Titles: two or three titles from the search results page, all related to that query. They are separateb by ";"
+       - Intent categories: One or more categories to define the intent behind the query. They are based on the query and on the Titles. 
+
+       Based on Query and Titles, review the Intent categories assigned and do the following: 
+       - If one or more categories included in "Intent categories" are wrong, provide as output: "WRONG:wrong category1|wrong category 2",
+       - If one or more categories are missing from "Intent categories", provide as output: MISSING:missing category1|missing category 2" 
+
+      Provide as output only your judgements on wrong or missing categories. Only use the categories included in the {guidelines_file}, do not introduce new categories. Do not add categories as MISSING, if they are already in "Intent categories". 
+      Make sure you follow the expected output structure: WRONG:wrong category1,MISSING:missing category. For example: 
+      My input: walmart near me,Walmart Supercenter in Mesquite, TX;Find a nearby store - Walmart.com;Walmart Neighborhood Market - Official MapQuest,local|location_sensitive|travel
+      Your output: WRONG:travel,MISSING:shopping
+
+
+      If you don't identify any wrong category, only add "WRONG:," followed by wrong categories. Do the same for missing categories. For example:     
+      My input: metv.com schedule,What's On MeTV?;Watch meTV,entertainment|navigational
+      Your output: WRONG:,MISSING:tv  .
+
+
+## How to run the script
+
+BEFORE
+
+1. Make sure you have python or python3 installed 
+2. Make sure you install the openAI library for python or python3 (https://platform.openai.com/docs/api-reference/introduction)
+3. Make sure you have a api key from openAI
+4. It's also easier to use Visual Studio Codes to run the code (I'm not sure if you can do it with jupiter notebook as well, or if you need to use its specific extension. You can also use the computer terminal. 
+
+THEN 
+
+5. Add your api key to the script in openai.api_key = '*paste key*'
+6. Change the files drectories at the end of the script (search for # Paths to files). You can find the directory with right click on the file > Get Info. The files you need are: 
+	- input file ("batchSample.csv")
+	- golden set ("goldenSet.csv")
+	- guidelines ("guidelines")
+The output is "LLMreviewOutput.csv"
+
+
+TO RUN THE CODE: 
+RUN WITH TERMINAL
+
+Open the terminal and go to the folder where you have saved the script. For example: cd Desktop/scripts/verify
+run the code with the command. For example, if you have python3 installed: python3 verifyCategories.py 
+
+RUN ON VISUAL STUDIO 
+open the script file with VSC and click on the "plan" button on the top right corner. 
+
+
+
+
+
+
+
+
