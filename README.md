@@ -1,4 +1,6 @@
-# my-work
+# Multi Intent Classificastion
+
+Automated categorization of query intents 
 
 
-whoooops exposing secret
+
